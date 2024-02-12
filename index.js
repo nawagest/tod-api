@@ -5,8 +5,8 @@ const axios = require('axios');
 const cors = require('cors');
 
 const api = require('./api/api');
-cors();
 
+app.use(cors({origin: "*"}))
 app.use('/api', api);
 
 app.get('/', (req, res) => {
